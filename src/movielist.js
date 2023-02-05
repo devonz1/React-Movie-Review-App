@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import './App.js';
 import Review from './reviewcomp';
+import Rating from './rating';
 
 
 
@@ -48,12 +49,15 @@ function  Movie() {
                 <div className='flex-container'>
                     {movieData.map((item) =>
                         <div id='movie_item'>
-                              <a href="http://localhost:3003/" ><img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} alt="movie" /></a> 
+                            <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}/>  
                             <div id = "movie_name">
                                  {item.original_title ? item.original_title : item.original_n}
                               <div>
                             <div className="review-list">
-                        <Review />
+                               <div>
+                        <span><Review /></span>
+                              <Rating />
+                        </div>
                         </div>
                         </div>
                          </div>

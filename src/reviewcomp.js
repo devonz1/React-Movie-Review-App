@@ -1,29 +1,33 @@
 import React from 'react';
 import '../src/App.css';
-import Movie from './movielist';
 
 
-let d = React.createElement;
- 
+
+
+
 
 export default class Review extends React.Component {
-    render (){
-
-        
-    return (        
-        <div></div>
-           
-       )       
+    render() {
 
 
-    
-         
-  
-  
+        return (
+            <div className='card w-70'>
+
+                <div className='card-header bg-dark text-white'>
+                    'User Review'</div>
+
+                <div className='card-body text-black fw-light'>'Add Review'</div>
+
+                <div className='card-footer'></div>
+
+            </div>
+        )
+
+
+
+
     }
-  
-  
-    
-  }
-  
-  
+
+
+}
+
