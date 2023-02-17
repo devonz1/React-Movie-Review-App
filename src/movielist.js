@@ -11,7 +11,8 @@ function  Movie() {
      
 
       const [movieData, setMovieData] = useState([]);///the movieData varaiable 
-    //will hold all the movie data that wil be dispalyed on the page
+    //will hold all the movie data that wil be dispalyed on the page  and setmovieData 
+    ///function data will allow us to set the movies.
 
     useEffect(() => {
         getTrendingMovieData("movie");
@@ -49,19 +50,15 @@ function  Movie() {
                 <div className='flex-container'>
                     {movieData.map((item) =>
                         <div id='movie_item'>
-                            <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}/>  
+                            <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} />  
                             <div id = "movie_name">
                                  {item.original_title ? item.original_title : item.original_n}
-                              <div>
-                            <div className="review-list">
-                               <div>
-                        <span><Review /></span>
-                              <Rating />
-                        </div>
+                               <div className="review-list">
+                             <Review/>
                         </div>
                         </div>
                          </div>
-                         </div>
+                        
                           
                         
                     )}
