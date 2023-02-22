@@ -1,7 +1,7 @@
 import React from 'react';
 import '../src/App.css';
 import Movie from './movielist';
-import Review from './reviewcomp';
+ 
 
 
 
@@ -16,7 +16,7 @@ export default class App extends React.Component {
         <div>
           <Movie />
           <div className='review_list'>
-          <Review />
+           
           </div>
         </div>
 

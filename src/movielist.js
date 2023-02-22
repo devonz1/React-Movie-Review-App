@@ -3,19 +3,20 @@ import axios from 'axios';
 import './App.css';
 import './App.js';
 import Review from './reviewcomp';
-import Rating from './rating';
 
 
 
-function  Movie() {
-     
+function Movie() {
 
-      const [movieData, setMovieData] = useState([]);///the movieData varaiable 
+
+    const [movieData, setMovieData] = useState([]);///the movieData varaiable 
     //will hold all the movie data that wil be dispalyed on the page  and setmovieData 
-    ///function data will allow us to set the movies.
+    ///function data will allow us to set the movies. The setmovieData function will allow
+    //us to change the state to display new trending movie data whenever they become available.
 
     useEffect(() => {
-        getTrendingMovieData("movie");
+        getTrendingMovieData("movie"); ///the useffecthook run the trendingmoviedata function to render
+        //all the trending movies once the component has rendered.
     }, []);
 
     async function getTrendingMovieData(type) {
@@ -34,7 +35,7 @@ function  Movie() {
 
         }
     };
-     
+
     return (
         <>
             <div className='background_container'>
@@ -50,21 +51,21 @@ function  Movie() {
                 <div className='flex-container'>
                     {movieData.map((item) =>
                         <div id='movie_item'>
-                            <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} />  
-                            <div id = "movie_name">
-                                 {item.original_title ? item.original_title : item.original_n}
-                               <div className="review-list">
-                             <Review/>
+                            <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} alt="poster" />
+                            <div id="movie_name">
+                                {item.original_title ? item.original_title : item.original_n}
+                                <div className="review-list">
+                                    <Review />
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                         </div>
-                        
-                          
-                        
+
+
+
                     )}
-                 </div>
+                </div>
             </div>
-                                 
+
 
         </>
     );

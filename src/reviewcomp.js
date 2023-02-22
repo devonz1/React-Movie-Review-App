@@ -6,26 +6,28 @@ export default class Review extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            reviews: props.reviews,
-            content: props.content,
-            count: 0
+           reviewValue: " " ,
+          reviewLine: [{reviewId:" " , text: " ",}],
         };
     }
 
 
     render() {
-        let reviews;
-        if (this.state.reviews) {
-            reviews = this.state.reviews.map((review, index) => <Review key={index} {...review} />);
-
-
+        let reviews = [];
+        if(this.state.reviews){
+            for(let review of this.state.reviews){
+                reviews.push(<Review {...review} />);
+            }
         }
+
+
+        
 
 
         return (
             <div className='card w-60'>
            <div className='card-header bg-dark text-white'>
-                    Name</div>
+                    Add Review</div>
 
                 <div className='card-body text-black fw-light '>
                      <body> </body>
