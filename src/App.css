@@ -1,12 +1,7 @@
- 
- 
+ .card-body {
+   height: 60px;
+ }
 
- 
-
-  .card-body{
-    height : 60px;
-  }
- 
  .button_container {
    display: flex;
    flex-direction: column;
@@ -30,7 +25,7 @@
    width: 300px;
    padding: 40px;
    margin: 10px;
- 
+
  }
 
 
@@ -52,9 +47,9 @@
    border: 1px solid #0f3f66;
    background-color: #084b81;
    color: white;
-   min-width: 200px;
+   min-width: 150px;
    margin-top: 20px;
-
+   width: 20px;
  }
 
  #movie_item {
@@ -74,4 +69,111 @@
    box-shadow: 3rem;
    height: auto;
    max-width: 70%;
+ }
+
+ .text {
+   font-size: medium;
+ }
+
+ button {
+   border: none;
+   border-radius: 0.25rem;
+   font-size: 0.8rem;
+   font-weight: bold;
+   padding: 0.2rem;
+   display: inline-block;
+   text-decoration: none;
+   width: 20px;
+
+ }
+
+ :hover {
+   cursor: pointer;
+ }
+
+ :focus {
+   text-decoration: none;
+   outline: none;
+ }
+
+ .com {
+   font-size: 0.8rem;
+ }
+
+ .review-box {
+
+   max-width: 25.5rem;
+   max-height: 27rem;
+   color: #fff;
+   height: 32.5rem;
+   background-color: #090136;
+   border-radius: 0.875rem;
+   padding: 0.2rem 1rem 2rem;
+ }
+
+ .review-form {
+   background-color: #fff;
+   border-radius: 0.25rem;
+   margin-bottom: 0.22rem;
+   padding: 1rem;
+
+ }
+
+ .review-form-fields {
+   margin-bottom: 0.35rem;
+ }
+
+ input,
+ textarea {
+   border: none;
+   border-bottom: 0.5px solid gray;
+   font-size: 0.85rem;
+   padding: 0.10;
+   width: 90%;
+ }
+
+ :focus {
+   border-bottom-color: rgb(206, 206, 206);
+   outline: none;
+ }
+
+ textarea {
+   font-style: italic;
+   max-height: fit-content;
+ }
+
+ .colo {
+   border-radius: 0.25rem;
+   margin-bottom: 2rem;
+   padding: 0.5rem;
+   width: 20px;
+   height: 30px;
+ }
+
+ .review-count {
+   color: grey;
+ }
+
+ #review-reveal {
+   float: right;
+   background-color: rgb(78, 71, 71);
+   color: #fff;
+ }
+
+ .review {
+   border-top: 0.125rem solid grey;
+ }
+
+ .review-body {
+   font-style: italic;
+   margin-left: 1rem;
+ }
+
+ .review-footer {
+   margin-bottom: 2rem;
+ }
+
+ :hover {
+   color: rgb(119, 119, 119);
+   font-weight: bold;
  }

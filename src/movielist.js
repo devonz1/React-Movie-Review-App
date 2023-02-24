@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import './App.js';
-import Review from './reviewcomp';
+import Review from './reviewlist';
 
 
 
@@ -27,7 +27,8 @@ function Movie() {
             //movie arrays and display each movie object on the page. and the resp.data.results 
             //will display the results from the api call that were storing in the resp variable.
 
-            setMovieData(resp.data.results);
+            setMovieData(resp.data.results);  ///this function will grabthe movie
+            //data form api requests and display the results that are returned.
         } catch (e) {
 
 
@@ -40,7 +41,7 @@ function Movie() {
         <>
             <div className='background_container'>
                 <div className='button_container'>
-                    <button onClick={() => {
+                    <button className="b1" onClick={() => {
                         getTrendingMovieData("movie"); //whenever we click the trending movies button it will gives
                         //us the 20 movies we pulled from the api call each time within an array of objects.
                     }
@@ -49,7 +50,8 @@ function Movie() {
                     </button>
                 </div>
                 <div className='flex-container'>
-                    {movieData.map((item) =>
+                    {movieData.map((item) => ///this function will display every item or element in this case the movies
+                         /// within the moviedata array  store the movies and return each movie within the div below
                         <div id='movie_item'>
                             <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} alt="poster" />
                             <div id="movie_name">
