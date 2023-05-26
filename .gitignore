@@ -4,9 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
-
+ 
 # testing
 /coverage
+
+#apikeys
+ .env
 
 # production
 /build

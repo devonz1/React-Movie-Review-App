@@ -3,8 +3,7 @@ import axios from 'axios';
 import './App.css';
 import './App.js';
 import Review from './reviewlist';
-
-
+ 
 
 function Movie() {
 
@@ -21,7 +20,7 @@ function Movie() {
 
     async function getTrendingMovieData(type) {
         try {
-            const apiKey = '8f6d7949d5d4a3d8de3cd275515511df';
+             const apiKey = process.env.REACT_APP_API_KEY
             let resp = await axios.get(`https://api.themoviedb.org/3/trending/${type}/week?api_key=${apiKey}&media_type=movie`);
             console.log(20, resp.data.results); //the console.log will return 20
             //movie arrays and display each movie object on the page. and the resp.data.results 
